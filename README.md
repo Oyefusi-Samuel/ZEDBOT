@@ -1,4 +1,4 @@
-# ZED-mobile-cleaning-simulated-robot.
+![image](https://github.com/user-attachments/assets/f9674a49-0e12-441a-ba3e-aaec1ec904a5)# ZED-mobile-cleaning-simulated-robot.
 Fisrt step in building the differential-drive ZED mobile cleaning robot:
 
 Create your ros2 workspace (You can use any name for your workspace, but follow naming rules.)
@@ -50,19 +50,33 @@ Launch the rviz Node:   (To visualize the robot joint, tf)
 ```
   ros2 launch robot display.launch.py 
 ```
-![Screenshot from 2024-12-19 13-54-59](https://github.com/user-attachments/assets/992d408c-3ccf-4444-8ea9-5433f56b6bfe)
+![Screenshot from 2024-12-19 13-58-04](https://github.com/user-attachments/assets/76c54e3a-6fae-48f9-943f-bee063887dfe)
 
 **The centre of the robot is the "base_link".**
 
 Plugins used in simulation of the robot can be gotten from:
 https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
 
-**spawning the robot into a custom gazebo world:**
-     To spawn the robot into gazebo, launch the file called show.robot.launch.py (Note: launch files in ROS 2 are python scripts/files)
- Command:
- ```
-   ros2 launch robot show.robot.launch.py
- ```
+# Spawning the robot into a custom gazebo world:
+To spawn the robot into gazebo, launch the file called show.robot.launch.py, ensure you save the custom designed gazebo world into the world directory in the src folder (Note: launch files in ROS 2 are python scripts/files)
+
+# To LAUNCH THE WORLD:
+ 
+```
+   ros2 launch robot show.robot.launch.py world:="path to the .world file"
+```
+Mine is:
+```
+ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/worlds/cafeworld' 
+```
+![Screenshot from 2024-12-19 14-09-51](https://github.com/user-attachments/assets/c2dca134-85bb-4497-a191-8be6e65ca0ef)
+
+
+```
+ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/worlds/outside.world' 
+```
+
+
  Check if the topics are available.This list all topics which are available:
  ```
    ros2 topic list
@@ -102,15 +116,7 @@ You can check the TF2 TREE:
 ```
 ![Screenshot from 2023-03-08 19-52-28](https://user-images.githubusercontent.com/97457075/223807831-64f8f7f3-c000-4d08-82b0-b4725c639a14.png)
 
-# To LAUNCH THE WORLD:
- 
-```
-   ros2 launch robot show.robot.launch.py world:="path to the .world file"
-```
-Mine is:
-```
-  ros2 launch robot show.robot.launch.py world:=/home/magnum/simuate_ws/src/robot/worlds/new.world
-```
+
 Outdoor 3D vision world
 
 
