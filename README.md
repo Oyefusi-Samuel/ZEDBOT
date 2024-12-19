@@ -110,9 +110,9 @@ ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/wor
 # SLAM 
 Run the slam_toolbox node.
 ```
-  ros2 launch robot online_async.launch.py 
+  ros2 launch ros2_mapping online_async_launch.py
 ```
-https://github.com/user-attachments/assets/1376903f-0d0d-4788-9e4d-83ada1f5b82a
+[ff.webm](https://github.com/user-attachments/assets/54a1b92b-fc27-4f83-9a48-a7cb5b1256fe)
 
 # AUTONOMOUS NAVIGATION:
  Localization:
