@@ -44,7 +44,7 @@ Launch the Node:   (To visualize the robot in an empty gazebo world)
 ```
  ros2 launch robot show.robot.launch.py use_sim_time:=true
 ```
-![Uploading Screenshot from 2024-12-19 13-42-21.png…]()
+
 
 Launch the rviz Node:   (To visualize the robot joint, tf)
 ```
@@ -56,7 +56,7 @@ Launch the rviz Node:   (To visualize the robot joint, tf)
 Plugins used in simulation of the robot can be gotten from:
 https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
 
-# SPAWNING THE ROBOT INTO a Custom GAZEBO world:
+**spawning the robot into a custom gazebo world:**
      To spawn the robot into gazebo, launch the file called show.robot.launch.py (Note: launch files in ROS 2 are python scripts/files)
  Command:
  ```
