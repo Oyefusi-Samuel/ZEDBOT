@@ -39,6 +39,8 @@ source install/setup.bash
 1. Lauch the robot in an empty world  
 
 2. Visualize in Rviz .
+   
+3. check the TF2 TREE
 
 Launch the Node:   (To visualize the robot in an empty gazebo world)
 ```
@@ -52,6 +54,12 @@ Launch the rviz Node:   (To visualize the robot joint, tf)
 ```
 ![Screenshot from 2024-12-19 13-58-04](https://github.com/user-attachments/assets/76c54e3a-6fae-48f9-943f-bee063887dfe)
 
+You can check the TF2 TREE:
+```
+  ros2 run rqt_tf_tree rqt_tf_tree
+```
+![Screenshot from 2024-12-19 14-40-35](https://github.com/user-attachments/assets/11522d88-2ae8-4230-a877-e5301900e78e)
+
 **The centre of the robot is the "base_link".**
 
 # Plugins used in simulation of the robot can be gotten from:
@@ -61,6 +69,7 @@ https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
 
 # Spawning the robot into a custom gazebo world:
 To spawn the robot into gazebo, launch the file called show.robot.launch.py, ensure you save the custom designed gazebo world into the world directory in the src folder (Note: launch files in ROS 2 are python scripts/files)
+
 
 # To LAUNCH THE WORLD:
  
@@ -77,19 +86,23 @@ ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/wor
 ```
 ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/worlds/outside.world' 
 ```
+![Screenshot from 2024-12-19 14-36-34](https://github.com/user-attachments/assets/7292b490-bbdb-45b0-a8c8-3f22dfdf448f)
 
-
- Check if the topics are available.This list all topics which are available:
+ Check if the topics are available.This list all **topics** which are available:
  ```
    ros2 topic list
  ```
- Now,we can drive the robot around once we use the teleop_twist_keyboard node to publish to the "/cmd_vel" topic that the robot subscribes to.
+ Now,we can drive the robot around once we use the teleop_twist_keyboard node to publish to the **"/cmd_vel" topic** that the robot subscribes to.
  
  ```
    ros2 run teleop_twist_keyboard  teleop_twist_keyboard
  ```
  
- You can give colour to the robot,by adding colour to the .xacro file.Video decription below,while using the teleop_twist_keyboard to drive the robot.
+ You can give colour to the robot,by adding colour to the robot .xacro file.Video decription below,while using the teleop_twist_keyboard to drive the robot.
+
+
+
+
  
 
  ```
@@ -105,28 +118,6 @@ ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/wor
    ros2 run drive_robot velocity_drive
  ```
 
-# LAUNCHING SAVED GAZEBO WORLD WITH ROBOT SPAWNED IN IT.
- ```
-    ros2 launch robot show.robot.launch.py world:='path to where you saved your Gazebo world'
- ```
- ![Screenshot from 2023-03-07 16-57-01](https://user-images.githubusercontent.com/97457075/223492102-4b27dd07-a5f6-4b56-91f1-b20b52a065ba.png)
-![Screenshot from 2023-03-07 17-02-44](https://user-images.githubusercontent.com/97457075/223492458-2b3d6ffe-db92-44e4-8a41-42573fa984d6.png)
-
-You can check the TF2 TREE:
-```
-  ros2 run rqt_tf_tree rqt_tf_tree
-```
-![Screenshot from 2023-03-08 19-52-28](https://user-images.githubusercontent.com/97457075/223807831-64f8f7f3-c000-4d08-82b0-b4725c639a14.png)
-
-
-Outdoor 3D vision world
-
-
-```
-  ros2 launch robot show.robot.launch.py world:=/home/robothrone/new_robogpt/ros2slam_ws/src/Ros-2-simulated-robot./worlds/outside_world.world 
-```
-
-![Screenshot from 2023-03-08 23-10-51](https://user-images.githubusercontent.com/97457075/223862718-2ca56db5-4b6a-4a9e-a5b2-625d82918a81.png)
 
 # SLAM 
 Run the slam_toolbox node.
