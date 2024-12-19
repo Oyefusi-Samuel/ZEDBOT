@@ -20,7 +20,7 @@ cd src
 ```
 
 ```
-  git clone https://github.com/Oyefusi-Samuel/ZED-mobile-cleaning-robot.git
+  git clone https://github.com/Oyefusi-Samuel/ZED-mobile-cleaning-simulated-robot..git
 ```
 If you build the workspace and you see some errors pop up .You should upgrade pytest to a version that is 6.2 or higher. Use the following command
 ```
@@ -31,14 +31,14 @@ Then build the workspace again:
   colcon build
 ```
 
-Launch the Node:
+Launch the Node:   (To visualize the robot in an empty gazebo world)
 ```
-  ros2 launch <name_of_package> robot.launch.py
+ ros2 launch robot show.robot.launch.py
 ```
 
-The joint state publisher node must be launched/be active when launching the robot in rviz2.
+Launch the rviz Node:   (To visualize the robot joint, tf)
 ```
-  ros2 run joint_state_publisher_gui joint_state_publisher_gui
+  ros2 launch robot display.launc.py 
 ```
 
 Open Rviz2:
