@@ -36,14 +36,13 @@ source install/setup.bash
 ```
 
 **STEPS TO TAKE TO GET THE ROBOT UP AND READY:**
-1. Lauch the robot in an empty world  **(Set the sim time to true,we dealing with simulation.So our the boolean has to be true.)**
+1. Lauch the robot in an empty world  
 
 2. Visualize in Rviz .
 
-
 Launch the Node:   (To visualize the robot in an empty gazebo world)
 ```
- ros2 launch robot show.robot.launch.py
+ ros2 launch robot show.robot.launch.py use_sim_time:=true
 ```
 ![Uploading Screenshot from 2024-12-19 13-42-21.png…]()
 
@@ -56,14 +55,6 @@ Launch the rviz Node:   (To visualize the robot joint, tf)
 
 Plugins used in simulation of the robot can be gotten from:
 https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
-
-```
-   ros2 launch robot show.robot.launch.py use_sim_time:=true
-```
-Start up Gazebo empty world:
-```
-   ros2 launch gazebo_ros gazebo.launch.py 
-```
 
 # SPAWNING THE ROBOT INTO a Custom GAZEBO world:
      To spawn the robot into gazebo, launch the file called show.robot.launch.py (Note: launch files in ROS 2 are python scripts/files)
