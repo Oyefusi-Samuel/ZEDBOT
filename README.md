@@ -44,12 +44,13 @@ Launch the Node:   (To visualize the robot in an empty gazebo world)
 ```
  ros2 launch robot show.robot.launch.py use_sim_time:=true
 ```
-
+![Screenshot from 2024-12-19 13-42-21](https://github.com/user-attachments/assets/04351a44-f6eb-4d3c-ab1c-bc062457ad40)
 
 Launch the rviz Node:   (To visualize the robot joint, tf)
 ```
   ros2 launch robot display.launch.py 
 ```
+![Screenshot from 2024-12-19 13-54-59](https://github.com/user-attachments/assets/992d408c-3ccf-4444-8ea9-5433f56b6bfe)
 
 **The centre of the robot is the "base_link".**
 
