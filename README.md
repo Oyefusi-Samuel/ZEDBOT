@@ -72,7 +72,7 @@ Mine is:
 ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/worlds/cafeworld' 
 ```
 ![Screenshot from 2024-12-19 14-09-51](https://github.com/user-attachments/assets/c2dca134-85bb-4497-a191-8be6e65ca0ef)
-
+![Screenshot from 2024-12-19 14-24-43](https://github.com/user-attachments/assets/08396e2a-4be4-48c1-9304-a7ec9c649b3d)
 
 ```
 ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/worlds/outside.world' 
