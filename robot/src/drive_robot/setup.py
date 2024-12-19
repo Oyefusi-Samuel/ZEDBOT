@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='magnum',
-    maintainer_email='ogunsdavis53@gmail.com',
+    maintainer_email='oluwakorede.oyefusi@pau.edu.ng',
     description='TODO: Package description',
     license='TODO: License declaration',
     tests_require=['pytest'],

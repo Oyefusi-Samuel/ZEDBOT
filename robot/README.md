@@ -1,19 +1,26 @@
-# Ros-2-simulated-robot.
-First step in building the differential-drive robot:
+# ZED-mobile-cleaning-simulated-robot.
+Fisrt step in building the differential-drive ZED mobile cleaning robot:
 
-In the src directory of your workspace , make a folder called "robot" and clone the repo in it.
+Create your ros2 workspace (You can use any name for your workspace, but follow naming rules.)
+```
+mkdir ros_ws 
+```
+```
+cd ros_ws
+```
+Create your src folder
 
 ```
-  cd src
+mkdir src
 ```
+
+In the src directory of your workspace clone the repo in it to work with robot pkg.
 ```
-  mkdir robot 
+cd src
 ```
+
 ```
-  cd robot 
-```
-```
-  git clone https://github.com/Daviesss/Ros-2-simulated-robot..git
+  git clone https://github.com/Oyefusi-Samuel/ZED-mobile-cleaning-simulated-robot..git
 ```
 If you build the workspace and you see some errors pop up .You should upgrade pytest to a version that is 6.2 or higher. Use the following command
 ```
@@ -24,30 +31,23 @@ Then build the workspace again:
   colcon build
 ```
 
-Launch the Node:
+Launch the Node:   (To visualize the robot in an empty gazebo world)
 ```
-  ros2 launch <name_of_package> robot.launch.py
-```
-
-The joint state publisher node must be launched/be active when launching the robot in rviz2.
-```
-  ros2 run joint_state_publisher_gui joint_state_publisher_gui
+ ros2 launch robot show.robot.launch.py
 ```
 
-Open Rviz2:
+Launch the rviz Node:   (To visualize the robot joint, tf)
 ```
-  ros2 run rviz2 rviz2
+  ros2 launch robot display.launch.py 
 ```
 
-Set the fixed frame to "base_link".
-
-The centre of the robot which is the "base_link".
+**The centre of the robot is the "base_link".**
 
 Plugins used in simulation of the robot can be gotten from:
 https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
 
 
-STEPS TO TAKE TO GET THE ROBOT UP AND READY:
+**STEPS TO TAKE TO GET THE ROBOT UP AND READY:**
 1. Launch the robot_state_publisher in simulation mode.
 2. Launch Gazebo.
 3. Spawn the robot into Gazebo.
@@ -61,7 +61,7 @@ Start up Gazebo empty world:
    ros2 launch gazebo_ros gazebo.launch.py 
 ```
 
-# SPAWNING THE ROBOT INTO GAZEBO:
+# SPAWNING THE ROBOT INTO a Custom GAZEBO world:
      To spawn the robot into gazebo, launch the file called show.robot.launch.py (Note: launch files in ROS 2 are python scripts/files)
  Command:
  ```
@@ -79,9 +79,7 @@ Start up Gazebo empty world:
  
  You can give colour to the robot,by adding colour to the .xacro file.Video decription below,while using the teleop_twist_keyboard to drive the robot.
  
- We can also write a python script that publish certain velocity to make the robot move and also perform some basic task.
- Create a ROS 2 package called drive_robot ,its dependecies on rclpy,the package should be created in the src directory of your workspace.
- 
+
  ```
    cd src
  ```
@@ -146,7 +144,10 @@ Navigation Mode(NAV2 stack)
 ```
    ros2 launch  robot nav.launch.py use_sim_time:=true map_subscribe_transient_local:true
 ```
-  
+   We can also write a python script that publish certain velocity to make the robot move and also perform some basic task.
+ Create a ROS 2 package called drive_robot ,its dependecies on rclpy,the package should be created in the src directory of your workspace.
+ ```
+
   
 [Screencast from 03-11-2023 05:26:36 PM.webm](https://user-images.githubusercontent.com/97457075/224503398-5ea5fe0c-618a-463e-9fa6-b0f82840eb19.webm)
 
@@ -164,8 +165,6 @@ If you are using ros 2 humble distro , just replace <ros2_distro> with humble . 
 ```
   sudo apt install ros-humble-ros-gz
 ```
-## TODO Task:
-To get the laser scan topic work using the new gazebo_sim.launch.py file ,to change some tags in the lidar_sensor.xacro file.
 
 
 
