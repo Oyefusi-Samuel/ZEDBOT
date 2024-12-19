@@ -38,17 +38,10 @@ Launch the Node:   (To visualize the robot in an empty gazebo world)
 
 Launch the rviz Node:   (To visualize the robot joint, tf)
 ```
-  ros2 launch robot display.launc.py 
+  ros2 launch robot display.launch.py 
 ```
 
-Open Rviz2:
-```
-  ros2 run rviz2 rviz2
-```
-
-Set the fixed frame to "base_link".
-
-The centre of the robot which is the "base_link".
+**The centre of the robot is the "base_link".**
 
 Plugins used in simulation of the robot can be gotten from:
 https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
@@ -68,7 +61,7 @@ Start up Gazebo empty world:
    ros2 launch gazebo_ros gazebo.launch.py 
 ```
 
-# SPAWNING THE ROBOT INTO GAZEBO:
+# SPAWNING THE ROBOT INTO a Custom GAZEBO world:
      To spawn the robot into gazebo, launch the file called show.robot.launch.py (Note: launch files in ROS 2 are python scripts/files)
  Command:
  ```
