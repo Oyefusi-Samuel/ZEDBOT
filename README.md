@@ -54,8 +54,10 @@ Launch the rviz Node:   (To visualize the robot joint, tf)
 
 **The centre of the robot is the "base_link".**
 
-Plugins used in simulation of the robot can be gotten from:
+# Plugins used in simulation of the robot can be gotten from:
 https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
+
+![image](https://github.com/user-attachments/assets/051a698d-09ee-4850-af7f-0cbf6805c6f0)
 
 # Spawning the robot into a custom gazebo world:
 To spawn the robot into gazebo, launch the file called show.robot.launch.py, ensure you save the custom designed gazebo world into the world directory in the src folder (Note: launch files in ROS 2 are python scripts/files)
@@ -75,7 +77,7 @@ ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/wor
 ```
 ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/worlds/outside.world' 
 ```
-![image](https://github.com/user-attachments/assets/051a698d-09ee-4850-af7f-0cbf6805c6f0)
+
 
  Check if the topics are available.This list all topics which are available:
  ```
