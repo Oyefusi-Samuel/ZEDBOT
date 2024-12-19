@@ -44,7 +44,7 @@ Launch the Node:   (To visualize the robot in an empty gazebo world)
 ```
  ros2 launch robot show.robot.launch.py use_sim_time:=true
 ```
-![Screenshot from 2024-12-19 13-42-21](https://github.com/user-attachments/assets/04351a44-f6eb-4d3c-ab1c-bc062457ad40)
+![Screenshot from 2024-12-19 13-42-21](https://github.com/user-attachments/assets/a2b43c19-0088-4ea7-a876-66cb8e40df39)
 
 Launch the rviz Node:   (To visualize the robot joint, tf)
 ```
