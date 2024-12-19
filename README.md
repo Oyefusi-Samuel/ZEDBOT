@@ -75,7 +75,7 @@ ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/wor
 ```
 ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/worlds/outside.world' 
 ```
-
+![image](https://github.com/user-attachments/assets/051a698d-09ee-4850-af7f-0cbf6805c6f0)
 
  Check if the topics are available.This list all topics which are available:
  ```
