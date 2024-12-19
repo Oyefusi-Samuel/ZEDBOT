@@ -98,25 +98,13 @@ ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/wor
    ros2 run teleop_twist_keyboard  teleop_twist_keyboard
  ```
  
- You can give colour to the robot,by adding colour to the robot .xacro file.Video decription below,while using the teleop_twist_keyboard to drive the robot.
+ You can give colour to the robot,by adding colour to the robot description .xacro file.
 
-
-
+![image](https://github.com/user-attachments/assets/7a46493f-694c-4e51-80fe-e2468c98deed)
 
  
 
- ```
-   cd src
- ```
- 
- ```
-   ros2 pkg create drive_robot --build-type ament_python --dependencies rclpy
- 
- ```
- Run the node in the pasckage to make the robot drive forward, in linear of x.
- ```
-   ros2 run drive_robot velocity_drive
- ```
+
 
 
 # SLAM 
@@ -145,6 +133,32 @@ Navigation Mode(NAV2 stack)
 
   
 [Screencast from 03-11-2023 05:26:36 PM.webm](https://user-images.githubusercontent.com/97457075/224503398-5ea5fe0c-618a-463e-9fa6-b0f82840eb19.webm)
+
+
+
+
+
+
+
+
+
+
+
+
+ ```
+   cd src
+ ```
+ 
+ ```
+   ros2 pkg create drive_robot --build-type ament_python --dependencies rclpy
+ 
+ ```
+ Run the node in the pasckage to make the robot drive forward, in linear of x.
+ ```
+   ros2 run drive_robot velocity_drive
+ ```
+
+
 
 # Converting Gazebo classic to Gazebo sim(Lastest Gazebo simulator)
 Install required dependecies
