@@ -5,15 +5,19 @@ Create your ros2 workspace (You can use any name for your workspace, but follow 
 ```
 mkdir ros_ws 
 ```
+<<<<<<< HEAD
 ```
 cd ros_ws
 ```
+=======
+>>>>>>> f0754b7 (update)
 Create your src folder
 
 ```
 mkdir src
 ```
 
+<<<<<<< HEAD
 In the src directory of your workspace clone the repo in it to work with robot pkg.
 ```
 cd src
@@ -21,6 +25,20 @@ cd src
 
 ```
   git clone https://github.com/Oyefusi-Samuel/ZED-mobile-cleaning-simulated-robot..git
+=======
+In the src directory of your workspace , make a folder called "robot" and clone the repo in it.
+```
+cd src
+```
+```
+  mkdir robot 
+```
+```
+  cd robot 
+```
+```
+  git clone https://github.com/Oyefusi-Samuel/ZED-mobile-cleaning-robot.git
+>>>>>>> f0754b7 (update)
 ```
 If you build the workspace and you see some errors pop up .You should upgrade pytest to a version that is 6.2 or higher. Use the following command
 ```
@@ -31,6 +49,7 @@ Then build the workspace again:
   colcon build
 ```
 
+<<<<<<< HEAD
 Launch the Node:   (To visualize the robot in an empty gazebo world)
 ```
  ros2 launch robot show.robot.launch.py
@@ -42,6 +61,26 @@ Launch the rviz Node:   (To visualize the robot joint, tf)
 ```
 
 **The centre of the robot is the "base_link".**
+=======
+Launch the Node:
+```
+  ros2 launch <name_of_package> robot.launch.py
+```
+
+The joint state publisher node must be launched/be active when launching the robot in rviz2.
+```
+  ros2 run joint_state_publisher_gui joint_state_publisher_gui
+```
+
+Open Rviz2:
+```
+  ros2 run rviz2 rviz2
+```
+
+Set the fixed frame to "base_link".
+
+The centre of the robot which is the "base_link".
+>>>>>>> f0754b7 (update)
 
 Plugins used in simulation of the robot can be gotten from:
 https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
@@ -61,7 +100,11 @@ Start up Gazebo empty world:
    ros2 launch gazebo_ros gazebo.launch.py 
 ```
 
+<<<<<<< HEAD
 # SPAWNING THE ROBOT INTO a Custom GAZEBO world:
+=======
+# SPAWNING THE ROBOT INTO GAZEBO:
+>>>>>>> f0754b7 (update)
      To spawn the robot into gazebo, launch the file called show.robot.launch.py (Note: launch files in ROS 2 are python scripts/files)
  Command:
  ```
