@@ -5,22 +5,20 @@ Create your ros2 workspace (You can use any name for your workspace, but follow 
 ```
 mkdir ros_ws 
 ```
+```
+cd ros_ws
+```
 Create your src folder
 
 ```
 mkdir src
 ```
 
-In the src directory of your workspace , make a folder called "robot" and clone the repo in it.
+In the src directory of your workspace clone the repo in it to work with robot pkg.
 ```
 cd src
 ```
-```
-  mkdir robot 
-```
-```
-  cd robot 
-```
+
 ```
   git clone https://github.com/Oyefusi-Samuel/ZED-mobile-cleaning-robot.git
 ```
