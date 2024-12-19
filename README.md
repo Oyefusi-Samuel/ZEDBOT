@@ -30,11 +30,22 @@ Then build the workspace again:
 ```
   colcon build
 ```
+**Source the workspace**
+```
+source install/setup.bash
+```
+
+**STEPS TO TAKE TO GET THE ROBOT UP AND READY:**
+1. Lauch the robot in an empty world  **(Set the sim time to true,we dealing with simulation.So our the boolean has to be true.)**
+
+2. Visualize in Rviz .
+
 
 Launch the Node:   (To visualize the robot in an empty gazebo world)
 ```
  ros2 launch robot show.robot.launch.py
 ```
+![Uploading Screenshot from 2024-12-19 13-42-21.png…]()
 
 Launch the rviz Node:   (To visualize the robot joint, tf)
 ```
@@ -46,13 +57,6 @@ Launch the rviz Node:   (To visualize the robot joint, tf)
 Plugins used in simulation of the robot can be gotten from:
 https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
 
-
-**STEPS TO TAKE TO GET THE ROBOT UP AND READY:**
-1. Launch the robot_state_publisher in simulation mode.
-2. Launch Gazebo.
-3. Spawn the robot into Gazebo.
-
-Set the sim time to true,we dealing with simulation.So our the boolean has to be true.
 ```
    ros2 launch robot show.robot.launch.py use_sim_time:=true
 ```
