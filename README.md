@@ -104,14 +104,33 @@ ros2 launch robot show.robot.launch.py world:='/home/sam/zed_robot/src/robot/wor
 
  
 
-
-
-
 # SLAM 
 Run the slam_toolbox node.
 ```
   ros2 launch ros2_mapping online_async_launch.py
 ```
+Open rviz to visualize SLAM (add laserscan, mapp tf, robotmodel) topics 
+```
+rviz2
+```
+![image](https://github.com/user-attachments/assets/843966c5-dacb-4f51-88c3-ab611036c3e2)
+
+ Now,we can drive the robot around using the teleop_twist_keyboard node to map the world.
+ 
+ ```
+   ros2 run teleop_twist_keyboard  teleop_twist_keyboard
+ ```
+![image](https://github.com/user-attachments/assets/2891d086-eb1c-4a34-9e52-9de18245f97c)
+
+Save your map using the ros2 map server node 
+```
+ros2 run nav2_map_server map_saver_cli -f /path/to/save/map_name  # Saves the current map to the specified path and file name
+```
+mine was 
+```
+ros2 run nav2_map_server map_saver_cli -f /home/sam/zed_robot/src/ros2_mapping/map/map_2  # Saves the current map to the specified path and file name
+```
+![image](https://github.com/user-attachments/assets/b07b7de9-4e69-4792-8689-4c5317406154)
 [ff.webm](https://github.com/user-attachments/assets/54a1b92b-fc27-4f83-9a48-a7cb5b1256fe)
 
 # AUTONOMOUS NAVIGATION:
@@ -123,6 +142,8 @@ But if you want to use the localization mode (AMCL) you have to specify the path
 
 -  ros2 launch robot localization.launch.py map:=""   use_sim_time:=true
 
+
+
 Navigation Mode(NAV2 stack)
 ```
    ros2 launch  robot nav.launch.py use_sim_time:=true map_subscribe_transient_local:true
@@ -130,21 +151,6 @@ Navigation Mode(NAV2 stack)
    We can also write a python script that publish certain velocity to make the robot move and also perform some basic task.
  Create a ROS 2 package called drive_robot ,its dependecies on rclpy,the package should be created in the src directory of your workspace.
  ```
-
-  
-[Screencast from 03-11-2023 05:26:36 PM.webm](https://user-images.githubusercontent.com/97457075/224503398-5ea5fe0c-618a-463e-9fa6-b0f82840eb19.webm)
-
-
-
-
-
-
-
-
-
-
-
-
  ```
    cd src
  ```
@@ -157,8 +163,6 @@ Navigation Mode(NAV2 stack)
  ```
    ros2 run drive_robot velocity_drive
  ```
-
-
 
 # Converting Gazebo classic to Gazebo sim(Lastest Gazebo simulator)
 Install required dependecies
