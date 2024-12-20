@@ -131,6 +131,7 @@ mine was
 ros2 run nav2_map_server map_saver_cli -f /home/sam/zed_robot/src/ros2_mapping/map/map_2  # Saves the current map to the specified path and file name
 ```
 ![image](https://github.com/user-attachments/assets/b07b7de9-4e69-4792-8689-4c5317406154)
+
 [ff.webm](https://github.com/user-attachments/assets/54a1b92b-fc27-4f83-9a48-a7cb5b1256fe)
 
 # AUTONOMOUS NAVIGATION:
