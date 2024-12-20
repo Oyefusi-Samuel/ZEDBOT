@@ -134,6 +134,24 @@ ros2 run nav2_map_server map_saver_cli -f /home/sam/zed_robot/src/ros2_mapping/m
 
 [ff.webm](https://github.com/user-attachments/assets/54a1b92b-fc27-4f83-9a48-a7cb5b1256fe)
 
+# AMCL
+Run the AMCL node.
+```
+ ros2 launch ros2_mapping amcl.launch.py
+```
+Open rviz to visualize SLAM (add Particlecloud, laserscan, mapp tf, robotmodel) topics, 2d pose estimate, you should see the particle cloud. 
+```
+rviz2
+```
+
+![image](https://github.com/user-attachments/assets/e5111874-074a-4082-a5dd-40fdc99b5ccb)
+
+ Now,we can drive the robot around using the teleop_twist_keyboard node to visualize the particle cloud around. 
+ 
+ ```
+   ros2 run teleop_twist_keyboard  teleop_twist_keyboard
+ ```
+
 # AUTONOMOUS NAVIGATION:
  Localization:
  ```
