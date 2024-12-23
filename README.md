@@ -1,4 +1,6 @@
 # ZED-mobile-cleaning-simulated-robot.
+![image](https://github.com/user-attachments/assets/05693079-0374-4f11-943a-48d90b5548c9)
+
 Fisrt step in building the differential-drive ZED mobile cleaning robot:
 
 Create your ros2 workspace (You can use any name for your workspace, but follow naming rules.)
