@@ -185,10 +185,13 @@ Navigation Mode(NAV2 stack)
    ros2 run drive_robot velocity_drive
  ```
 
-# Converting Gazebo classic to Gazebo sim(Lastest Gazebo simulator)
+# Converting Gazebo classic to Gazebo Ignition(Lastest Gazebo simulator)
 Install required dependecies
 ```
-  sudo apt install ros-<ros2_distro>-ros-gz
+  sudo apt install ros-<ros2_distro>-ros-ign-gazebo
+  sudo apt install ros-humble-ros-ign-gazebo  # my current ros distro is humble, you can change to fit your ros version (foxy, jazzy)
+  sudo apt install ros-humble-ros-gz-bridge
+  sudo apt install ros-humble-ign-ros2-control
   sudo apt install ros-humble-twist-mux
   sudo apt install ros-humble-twist-stamper
   sudo apt install ros-humble-ros2-control
