@@ -156,11 +156,13 @@ rviz2
 
 # AUTONOMOUS NAVIGATION:
  Localization:
- ```ros2 launch ros2_mapping localization.launch.py
+ ```
+ros2 launch ros2_mapping localization.launch.py
 ```
 
 Navigation Mode(NAV2 stack)
-``` ros2 launch ros2_mapping navigation.py    # set 2d pose estimate of the robot to begin navigation
+```
+ ros2 launch ros2_mapping navigation.py    # set 2d pose estimate of the robot to begin navigation
 ```
    
    We can also write a python script that publish certain velocity to make the robot move and also perform some basic task.
