@@ -156,18 +156,13 @@ rviz2
 
 # AUTONOMOUS NAVIGATION:
  Localization:
- ```
-    ros2 launch robot localization.launch.py map:=/home/magnum/simuate_ws/src/robot/maps/offline.yaml  use_sim_time:=true
+ ```ros2 launch ros2_mapping localization.launch.py
 ```
-But if you want to use the localization mode (AMCL) you have to specify the path in which your map.yaml file is located and pass it into map:=""
-````
-ros2 launch robot localization.launch.py map:=""   use_sim_time:=true
-````
 
 Navigation Mode(NAV2 stack)
+``` ros2 launch ros2_mapping navigation.py    # set 2d pose estimate of the robot to begin navigation
 ```
-   ros2 launch  robot nav.launch.py use_sim_time:=true map_subscribe_transient_local:true
-```
+   
    We can also write a python script that publish certain velocity to make the robot move and also perform some basic task.
    
  Create a ROS 2 package called drive_robot ,its dependecies on rclpy,the package should be created in the src directory of your workspace.
