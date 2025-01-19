@@ -1,0 +1,85 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sam/zed_robot/src/build/robot
+-- Install configuration: ""
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/robot.launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/navigation.launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/display.launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/nav.launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/online_async.launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/localization.launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/gazebo_sim.launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/offline_launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/nav2.launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/point_cloud_to_laser.launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/launch/show.robot.launch.py
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/description
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/description/gazebo_controller.xacro
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/description/lidar_sensor.xacro
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/description/inertial.xacro
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/description/xacro
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/description/dept_camera.xacro
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/description/robot.xacro
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/description/robot.urdf.xacro
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/params
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/params/mapper_params_offline.yaml
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/params/nav2.yaml
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/params/nav.yaml
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/params/mapper_params_online_async.yaml
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/maps
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/maps/first.yaml.pgm
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/maps/offline.pgm
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/maps/offline.yaml
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/maps/first.yaml.yaml
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/config
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/config/robot_display.rviz
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/config/mapper_params_online_async.yaml
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/worlds
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/worlds/new.world
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/worlds/human.world
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/worlds/outside.world
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/worlds/cafeworld
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/worlds/robot.world
+-- Installing: /home/sam/zed_robot/src/install/robot/share/ament_index/resource_index/package_run_dependencies/robot
+-- Installing: /home/sam/zed_robot/src/install/robot/share/ament_index/resource_index/parent_prefix_path/robot
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/environment/ament_prefix_path.sh
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/environment/ament_prefix_path.dsv
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/environment/path.sh
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/environment/path.dsv
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/local_setup.bash
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/local_setup.sh
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/local_setup.zsh
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/local_setup.dsv
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/package.dsv
+-- Installing: /home/sam/zed_robot/src/install/robot/share/ament_index/resource_index/packages/robot
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/cmake/robotConfig.cmake
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/cmake/robotConfig-version.cmake
+-- Installing: /home/sam/zed_robot/src/install/robot/share/robot/package.xml

@@ -1,0 +1,6 @@
+Invoking command in '/home/sam/zed_robot/src/build/robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/sam/zed_robot/src/robot -DCMAKE_INSTALL_PREFIX=/home/sam/zed_robot/src/install/robot
+Invoked command in '/home/sam/zed_robot/src/build/robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/sam/zed_robot/src/robot -DCMAKE_INSTALL_PREFIX=/home/sam/zed_robot/src/install/robot
+Invoking command in '/home/sam/zed_robot/src/build/robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sam/zed_robot/src/build/robot -- -j20 -l20
+Invoked command in '/home/sam/zed_robot/src/build/robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sam/zed_robot/src/build/robot -- -j20 -l20
+Invoking command in '/home/sam/zed_robot/src/build/robot': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sam/zed_robot/src/build/robot
+Invoked command in '/home/sam/zed_robot/src/build/robot' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sam/zed_robot/src/build/robot
