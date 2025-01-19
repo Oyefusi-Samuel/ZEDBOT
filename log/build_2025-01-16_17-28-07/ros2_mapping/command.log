@@ -1,6 +1,0 @@
-Invoking command in '/home/sam/zed_robot/src/build/ros2_mapping': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/sam/zed_robot/src/ros2_mapping -DCMAKE_INSTALL_PREFIX=/home/sam/zed_robot/src/install/ros2_mapping
-Invoked command in '/home/sam/zed_robot/src/build/ros2_mapping' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/sam/zed_robot/src/ros2_mapping -DCMAKE_INSTALL_PREFIX=/home/sam/zed_robot/src/install/ros2_mapping
-Invoking command in '/home/sam/zed_robot/src/build/ros2_mapping': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sam/zed_robot/src/build/ros2_mapping -- -j20 -l20
-Invoked command in '/home/sam/zed_robot/src/build/ros2_mapping' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sam/zed_robot/src/build/ros2_mapping -- -j20 -l20
-Invoking command in '/home/sam/zed_robot/src/build/ros2_mapping': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sam/zed_robot/src/build/ros2_mapping
-Invoked command in '/home/sam/zed_robot/src/build/ros2_mapping' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sam/zed_robot/src/build/ros2_mapping
