@@ -2,10 +2,11 @@
 import rclpy
 from nav2_simple_commander.robot_navigator import BasicNavigator
 from geometry_msgs.msg import PoseStamped
-import tf_transformations
+from tf_transformations import quaternion_from_euler
+
 
 def create_pose_stamped(navigator, position_x, position_y, rotation_z):
-    q_x, q_y, q_z, q_w = tf_transformations.quaternion_from_euler(0.0, 0.0, rotation_z)
+    q_x, q_y, q_z, q_w = quaternion_from_euler(0.0, 0.0, rotation_z)
     goal_pose = PoseStamped()
     goal_pose.header.frame_id = 'map'
     goal_pose.header.stamp = navigator.get_clock().now().to_msg()
@@ -18,15 +19,15 @@ def create_pose_stamped(navigator, position_x, position_y, rotation_z):
     goal_pose.pose.orientation.w = q_w
     return goal_pose
 
+
 def main():
     # --- Init ROS2 communications and Simple Commander API ---
     rclpy.init()
     nav = BasicNavigator()
 
     # --- Set initial pose ---
-    # !!! Comment if the initial pose is already set !!!
     initial_pose = create_pose_stamped(nav, 0.0, 0.0, 0.0)
-    #nav.setInitialPose(initial_pose)
+    nav.setInitialPose(initial_pose)
 
     # --- Wait for Nav2 ---
     nav.waitUntilNav2Active()
@@ -36,26 +37,29 @@ def main():
     goal_pose2 = create_pose_stamped(nav, 2.0, 2.5, 3.14)
     goal_pose3 = create_pose_stamped(nav, 0.5, 1.0, 0.0)
 
-    # --- Going to one pose ---
+    # --- Go to the first pose ---
     nav.goToPose(goal_pose1)
     while not nav.isTaskComplete():
+        feedback = nav.getFeedback()
+        if feedback:
+            print(f"Distance remaining: {feedback.distance_remaining:.2f} meters")
+
+    # --- Follow waypoints ---
+    waypoints = [goal_pose1, goal_pose2, goal_pose3]
+    for goal_pose in waypoints:
+        nav.followWaypoints([goal_pose])
+
+        while not nav.isTaskComplete():
             feedback = nav.getFeedback()
-            # print(feedback)
-
-    # --- Follow Waypoints ---
-    # waypoints = [goal_pose1, goal_pose2, goal_pose3]
-    # for i in range(3):
-    #     nav.followWaypoints(waypoints)
-
-    #     while not nav.isTaskComplete():
-    #         feedback = nav.getFeedback()
-    #         # print(feedback)
+            if feedback:
+                print(f"Current waypoint distance remaining: {feedback.distance_remaining:.2f} meters")
 
     # --- Get the result ---
-    print(nav.getResult())
+    print("Final navigation result:", nav.getResult())
 
     # --- Shutdown ROS2 communications ---
     rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
